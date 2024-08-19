@@ -15,7 +15,7 @@ body {
 	body {
 		margin: 2em auto;
 		max-width: 900px;
-		color: rgb(55, 53, 47);
+		color: rgb(47, 49, 55);
 	}
 }
 
@@ -104,7 +104,7 @@ hr {
 	height: 1px;
 	visibility: visible;
 	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+	border-bottom: 1px solid rgba(47, 49, 55, 0.09);
 }
 
 img {
@@ -122,27 +122,33 @@ img {
 	margin: 1in;
 }
 
+/* section content */
 .collection-content {
 	font-size: 0.875rem;
 }
 
+/* listed content */
 .column-list {
 	display: flex;
 	justify-content: space-between;
 }
 
+/* overall containers */
 .column {
 	padding: 0 1em;
 }
 
+/* left handed column */
 .column:first-child {
 	padding-left: 0;
 }
 
+/* right handed column */
 .column:last-child {
 	padding-right: 0;
 }
 
+/* add-on feature */
 .table_of_contents-item {
 	display: block;
 	font-size: 0.875rem;
@@ -165,13 +171,13 @@ img {
 .table_of_contents-link {
 	text-decoration: none;
 	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+	border-bottom: 1px solid rgba(47, 49, 55, 0.18);
 }
 
 table,
 th,
 td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
+	border: 1px solid rgba(47, 49, 55, 0.09);
 	border-collapse: collapse;
 }
 
@@ -190,7 +196,7 @@ td {
 }
 
 th {
-	color: rgba(55, 53, 47, 0.6);
+	color: rgba(47, 49, 55, 0.6);
 }
 
 ol,
@@ -267,7 +273,7 @@ ol > li {
 .selected-value {
 	display: inline-block;
 	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
+	background: rgba(202, 202, 206, 0.5);
 	border-radius: 3px;
 	margin-right: 0.5em;
 	margin-top: 0.3em;
