@@ -1,31 +1,32 @@
-import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import NavBar from "./Components/NavBar";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import DocumentMeta from 'react-document-meta';
 import MainPage from "./Pages/Main";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
 import NotFound from "./Pages/NotFound";
 
 function App() {
-  const { pathname } = useLocation()
-  useEffect(() => {
-    const navigationContainer = document.getElementById("navigation-container");
-    if (navigationContainer) {
-      navigationContainer.scrollTop = 0;
+  const meta = {
+    title: 'Simone Moore Portfolio',
+    description: 'Invested in ethical solutions for the future of tech. Lets get to work.',
+    canonical: 'http://localhost:3000',
+    meta: {
+      charset: 'utf-8',
+      name: {
+        viewport: `width=device-width, initial-scale=1.0`,
+        keywords: `react,meta,document,html,tags`
+      }
     }
-  }, [pathname]);
+  };
+
   return (
-    <section className="content-container" id="navigation-container">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </section>
+    <DocumentMeta {...meta}>
+      <section className="content-container">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </section>
+      </DocumentMeta>
   )
 }
 

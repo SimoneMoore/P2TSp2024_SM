@@ -1,25 +1,28 @@
 import React from "react";
+import Simone from "../Assets/Simone_Photo.jpg"
 import gmail from "super-tiny-icons/images/svg/gmail.svg";
-import linkedin from "super-tiny-icons/images/svg/LinkedIn.svg";
+import linkedin from "super-tiny-icons/images/svg/linkedin.svg";
 
 
 const Professional= () => {
+    const myEmail= "moores0929@gmail.com";
     return (
         <>
         <section style={{width: "25%"}} class="profession-card">
             <figure class="image">
                 {/* render circle */}
-                    <img style={{width: "279.5px"}} alt="Simone Moore" src="../Assets/Simone_Photo.jpg"/>
+                    <img style={{width: "279.5px"}} alt="Simone Moore" src={Simone}/>
             </figure>
             <p class="name">Simone Moore</p>
             <h1 class="contact-title">Contact Me</h1>
             <section class="contact-list">
                 <div style={{width: "100%"}} class="email-container">
                     <figure class="" style={{whitespace: "pre-wrap", display: "flex"}}>
-                        <div style={{fontsize: "1.5em"}}><img class="icon" alt="Gmail Logo" src={gmail}/>
+                        <div style={{fontsize: "1.5em"}}>
+                            <img class="icon" alt="Gmail Logo" style={{width: "2rem", height: "2rem"}} src={gmail}/>
                         </div>
                         <div style={{width: "100%"}}>
-                            <a href="mailto:moores0929@gmail.com">E-Mail</a>
+                            <p>{myEmail}</p>
                         </div>
                     </figure>
                 </div>
